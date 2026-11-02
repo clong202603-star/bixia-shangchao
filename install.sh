@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO="https://github.com/clong202603-star/ai-task-done.git"
+REPO="https://github.com/clong202603-star/bixia-shangchao.git"
 SOURCE="${BASH_SOURCE[0]:-}"
 
 if [[ -n "$SOURCE" && -f "$SOURCE" ]]; then
@@ -10,5 +10,5 @@ if [[ -n "$SOURCE" && -f "$SOURCE" ]]; then
 fi
 
 TMP="$(mktemp -d)"
-git clone --depth 1 "$REPO" "$TMP/ai-task-done"
-exec python3 "$TMP/ai-task-done/install.py"
+git clone --depth 1 "$REPO" "$TMP/repo"
+exec python3 "$TMP/repo/install.py"
